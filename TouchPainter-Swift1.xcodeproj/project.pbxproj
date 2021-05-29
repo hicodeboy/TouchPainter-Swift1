@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		E591A94E266277A300A40027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A94D266277A300A40027 /* AppDelegate.swift */; };
 		E591A950266277A300A40027 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A94F266277A300A40027 /* SceneDelegate.swift */; };
-		E591A952266277A300A40027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A951266277A300A40027 /* ViewController.swift */; };
 		E591A955266277A300A40027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591A953266277A300A40027 /* Main.storyboard */; };
 		E591A957266277A500A40027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E591A956266277A500A40027 /* Assets.xcassets */; };
 		E591A95A266277A500A40027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591A958266277A500A40027 /* LaunchScreen.storyboard */; };
 		E591A965266277A500A40027 /* TouchPainter_Swift1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A964266277A500A40027 /* TouchPainter_Swift1Tests.swift */; };
 		E591A970266277A500A40027 /* TouchPainter_Swift1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A96F266277A500A40027 /* TouchPainter_Swift1UITests.swift */; };
+		E591A985266278BE00A40027 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A984266278BE00A40027 /* CanvasViewController.swift */; };
+		E591A98D266278D200A40027 /* ThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A98C266278D200A40027 /* ThumbnailViewController.swift */; };
+		E591A992266278DE00A40027 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A991266278DE00A40027 /* PaletteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		E591A94A266277A300A40027 /* TouchPainter-Swift1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TouchPainter-Swift1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591A94D266277A300A40027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E591A94F266277A300A40027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E591A951266277A300A40027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E591A954266277A300A40027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E591A956266277A500A40027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E591A959266277A500A40027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		E591A96B266277A500A40027 /* TouchPainter-Swift1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TouchPainter-Swift1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591A96F266277A500A40027 /* TouchPainter_Swift1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPainter_Swift1UITests.swift; sourceTree = "<group>"; };
 		E591A971266277A500A40027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E591A984266278BE00A40027 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
+		E591A98C266278D200A40027 /* ThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailViewController.swift; sourceTree = "<group>"; };
+		E591A991266278DE00A40027 /* PaletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,9 @@
 		E591A94C266277A300A40027 /* TouchPainter-Swift1 */ = {
 			isa = PBXGroup;
 			children = (
+				E591A9832662788A00A40027 /* View Controllers */,
 				E591A94D266277A300A40027 /* AppDelegate.swift */,
 				E591A94F266277A300A40027 /* SceneDelegate.swift */,
-				E591A951266277A300A40027 /* ViewController.swift */,
 				E591A953266277A300A40027 /* Main.storyboard */,
 				E591A956266277A500A40027 /* Assets.xcassets */,
 				E591A958266277A500A40027 /* LaunchScreen.storyboard */,
@@ -126,6 +130,16 @@
 				E591A971266277A500A40027 /* Info.plist */,
 			);
 			path = "TouchPainter-Swift1UITests";
+			sourceTree = "<group>";
+		};
+		E591A9832662788A00A40027 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E591A984266278BE00A40027 /* CanvasViewController.swift */,
+				E591A98C266278D200A40027 /* ThumbnailViewController.swift */,
+				E591A991266278DE00A40027 /* PaletteViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E591A952266277A300A40027 /* ViewController.swift in Sources */,
+				E591A985266278BE00A40027 /* CanvasViewController.swift in Sources */,
 				E591A94E266277A300A40027 /* AppDelegate.swift in Sources */,
+				E591A98D266278D200A40027 /* ThumbnailViewController.swift in Sources */,
+				E591A992266278DE00A40027 /* PaletteViewController.swift in Sources */,
 				E591A950266277A300A40027 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
