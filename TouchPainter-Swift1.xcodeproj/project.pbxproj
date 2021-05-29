@@ -17,6 +17,13 @@
 		E591A985266278BE00A40027 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A984266278BE00A40027 /* CanvasViewController.swift */; };
 		E591A98D266278D200A40027 /* ThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A98C266278D200A40027 /* ThumbnailViewController.swift */; };
 		E591A992266278DE00A40027 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A991266278DE00A40027 /* PaletteViewController.swift */; };
+		E591A99B26627D0000A40027 /* ScribbleThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A99A26627D0000A40027 /* ScribbleThumbnailCell.swift */; };
+		E591A9A726627E5C00A40027 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9A626627E5C00A40027 /* ViewUtil.swift */; };
+		E591A9B026627EEB00A40027 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9AF26627EEB00A40027 /* Command.swift */; };
+		E591A9B826627F2400A40027 /* CommandBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9B726627F2400A40027 /* CommandBarButton.swift */; };
+		E591A9BD26627F5400A40027 /* CommandSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9BC26627F5400A40027 /* CommandSlider.swift */; };
+		E591A9C226627F8600A40027 /* SetStroleSizeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9C126627F8600A40027 /* SetStroleSizeCommand.swift */; };
+		E591A9C72662803000A40027 /* SetStrokeColorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9C62662803000A40027 /* SetStrokeColorCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		E591A984266278BE00A40027 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		E591A98C266278D200A40027 /* ThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailViewController.swift; sourceTree = "<group>"; };
 		E591A991266278DE00A40027 /* PaletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
+		E591A99A26627D0000A40027 /* ScribbleThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleThumbnailCell.swift; sourceTree = "<group>"; };
+		E591A9A626627E5C00A40027 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		E591A9AF26627EEB00A40027 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		E591A9B726627F2400A40027 /* CommandBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandBarButton.swift; sourceTree = "<group>"; };
+		E591A9BC26627F5400A40027 /* CommandSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandSlider.swift; sourceTree = "<group>"; };
+		E591A9C126627F8600A40027 /* SetStroleSizeCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetStroleSizeCommand.swift; sourceTree = "<group>"; };
+		E591A9C62662803000A40027 /* SetStrokeColorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetStrokeColorCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +117,8 @@
 		E591A94C266277A300A40027 /* TouchPainter-Swift1 */ = {
 			isa = PBXGroup;
 			children = (
+				E591A9AE26627EE100A40027 /* Command */,
+				E591A9A526627E2E00A40027 /* Utilites */,
 				E591A9832662788A00A40027 /* View Controllers */,
 				E591A94D266277A300A40027 /* AppDelegate.swift */,
 				E591A94F266277A300A40027 /* SceneDelegate.swift */,
@@ -135,11 +151,40 @@
 		E591A9832662788A00A40027 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E591A99926627CF200A40027 /* Scribble Thumbnail Cell */,
 				E591A984266278BE00A40027 /* CanvasViewController.swift */,
 				E591A98C266278D200A40027 /* ThumbnailViewController.swift */,
 				E591A991266278DE00A40027 /* PaletteViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E591A99926627CF200A40027 /* Scribble Thumbnail Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E591A99A26627D0000A40027 /* ScribbleThumbnailCell.swift */,
+			);
+			path = "Scribble Thumbnail Cell";
+			sourceTree = "<group>";
+		};
+		E591A9A526627E2E00A40027 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				E591A9A626627E5C00A40027 /* ViewUtil.swift */,
+				E591A9B726627F2400A40027 /* CommandBarButton.swift */,
+				E591A9BC26627F5400A40027 /* CommandSlider.swift */,
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
+		E591A9AE26627EE100A40027 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				E591A9AF26627EEB00A40027 /* Command.swift */,
+				E591A9C126627F8600A40027 /* SetStroleSizeCommand.swift */,
+				E591A9C62662803000A40027 /* SetStrokeColorCommand.swift */,
+			);
+			path = Command;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,11 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E591A9C72662803000A40027 /* SetStrokeColorCommand.swift in Sources */,
+				E591A9BD26627F5400A40027 /* CommandSlider.swift in Sources */,
 				E591A985266278BE00A40027 /* CanvasViewController.swift in Sources */,
+				E591A9B826627F2400A40027 /* CommandBarButton.swift in Sources */,
+				E591A9A726627E5C00A40027 /* ViewUtil.swift in Sources */,
 				E591A94E266277A300A40027 /* AppDelegate.swift in Sources */,
+				E591A99B26627D0000A40027 /* ScribbleThumbnailCell.swift in Sources */,
 				E591A98D266278D200A40027 /* ThumbnailViewController.swift in Sources */,
 				E591A992266278DE00A40027 /* PaletteViewController.swift in Sources */,
+				E591A9C226627F8600A40027 /* SetStroleSizeCommand.swift in Sources */,
 				E591A950266277A300A40027 /* SceneDelegate.swift in Sources */,
+				E591A9B026627EEB00A40027 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
