@@ -24,6 +24,11 @@
 		E591A9BD26627F5400A40027 /* CommandSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9BC26627F5400A40027 /* CommandSlider.swift */; };
 		E591A9C226627F8600A40027 /* SetStroleSizeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9C126627F8600A40027 /* SetStroleSizeCommand.swift */; };
 		E591A9C72662803000A40027 /* SetStrokeColorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9C62662803000A40027 /* SetStrokeColorCommand.swift */; };
+		E591A9D0266283E600A40027 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9CF266283E600A40027 /* Mark.swift */; };
+		E591A9D52662847900A40027 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9D42662847900A40027 /* Vertex.swift */; };
+		E591A9DA2662855900A40027 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9D92662855900A40027 /* Stroke.swift */; };
+		E591A9DF266286A000A40027 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9DE266286A000A40027 /* Dot.swift */; };
+		E591A9E52662871C00A40027 /* MarkVistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9E42662871C00A40027 /* MarkVistor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		E591A9BC26627F5400A40027 /* CommandSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandSlider.swift; sourceTree = "<group>"; };
 		E591A9C126627F8600A40027 /* SetStroleSizeCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetStroleSizeCommand.swift; sourceTree = "<group>"; };
 		E591A9C62662803000A40027 /* SetStrokeColorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetStrokeColorCommand.swift; sourceTree = "<group>"; };
+		E591A9CF266283E600A40027 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		E591A9D42662847900A40027 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		E591A9D92662855900A40027 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		E591A9DE266286A000A40027 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
+		E591A9E42662871C00A40027 /* MarkVistor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVistor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,8 @@
 		E591A94C266277A300A40027 /* TouchPainter-Swift1 */ = {
 			isa = PBXGroup;
 			children = (
+				E591A9E32662871100A40027 /* Vistor */,
+				E591A9CE266283D400A40027 /* Prototype */,
 				E591A9AE26627EE100A40027 /* Command */,
 				E591A9A526627E2E00A40027 /* Utilites */,
 				E591A9832662788A00A40027 /* View Controllers */,
@@ -185,6 +197,25 @@
 				E591A9C62662803000A40027 /* SetStrokeColorCommand.swift */,
 			);
 			path = Command;
+			sourceTree = "<group>";
+		};
+		E591A9CE266283D400A40027 /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				E591A9CF266283E600A40027 /* Mark.swift */,
+				E591A9D42662847900A40027 /* Vertex.swift */,
+				E591A9D92662855900A40027 /* Stroke.swift */,
+				E591A9DE266286A000A40027 /* Dot.swift */,
+			);
+			path = Prototype;
+			sourceTree = "<group>";
+		};
+		E591A9E32662871100A40027 /* Vistor */ = {
+			isa = PBXGroup;
+			children = (
+				E591A9E42662871C00A40027 /* MarkVistor.swift */,
+			);
+			path = Vistor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,12 +353,17 @@
 				E591A985266278BE00A40027 /* CanvasViewController.swift in Sources */,
 				E591A9B826627F2400A40027 /* CommandBarButton.swift in Sources */,
 				E591A9A726627E5C00A40027 /* ViewUtil.swift in Sources */,
+				E591A9D52662847900A40027 /* Vertex.swift in Sources */,
 				E591A94E266277A300A40027 /* AppDelegate.swift in Sources */,
+				E591A9DA2662855900A40027 /* Stroke.swift in Sources */,
 				E591A99B26627D0000A40027 /* ScribbleThumbnailCell.swift in Sources */,
 				E591A98D266278D200A40027 /* ThumbnailViewController.swift in Sources */,
 				E591A992266278DE00A40027 /* PaletteViewController.swift in Sources */,
+				E591A9DF266286A000A40027 /* Dot.swift in Sources */,
 				E591A9C226627F8600A40027 /* SetStroleSizeCommand.swift in Sources */,
 				E591A950266277A300A40027 /* SceneDelegate.swift in Sources */,
+				E591A9D0266283E600A40027 /* Mark.swift in Sources */,
+				E591A9E52662871C00A40027 /* MarkVistor.swift in Sources */,
 				E591A9B026627EEB00A40027 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
