@@ -15,8 +15,16 @@ class CanvasViewController: UIViewController {
     var strokeSize: CGFloat!  // 线段粗细
     var startPoint: CGPoint!
     
+    @IBOutlet weak var trashBarButton: CommandBarButton!
+    
+    @IBOutlet weak var saveBarButton: CommandBarButton!
+    
+    @IBOutlet weak var undoBarButton: CommandBarButton!
+    
+    @IBOutlet weak var redoBarButton: CommandBarButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        trashBarButton.command = DeleteScribbleCommand()
         
         // 设置中介者画板对象
         CoordinatingController.instance.canvasViewController = self
@@ -83,6 +91,9 @@ class CanvasViewController: UIViewController {
         startPoint = .zero
     }
     
+    @IBAction func toolBarAction(_ sender: CommandBarButton) {
+        sender.command?.execute()
+    }
     func loadSizeAndColor() {
         let userDefaults = UserDefaults.init()
         let redValue = userDefaults.float(forKey: "red")

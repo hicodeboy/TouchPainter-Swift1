@@ -21,25 +21,29 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Dko-1E-VZv"/>
-                                    <barButtonItem tag="1" title="Item" image="trash" catalog="system" id="9Rz-uT-Ca4"/>
+                                    <barButtonItem tag="1" title="Item" image="trash" catalog="system" id="9Rz-uT-Ca4" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target">
+                                        <connections>
+                                            <action selector="toolBarAction:" destination="5qe-Pt-vlS" id="L5e-Kc-AsT"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wxD-iv-4gn"/>
-                                    <barButtonItem tag="2" title="Item" image="arrow.down.app" catalog="system" id="cqN-Lk-UQp"/>
+                                    <barButtonItem tag="2" title="Item" image="arrow.down.app" catalog="system" id="cqN-Lk-UQp" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="A6Z-ul-sZz"/>
-                                    <barButtonItem tag="3" title="Item" image="arrow.up.square" catalog="system" id="42i-gV-sEr">
+                                    <barButtonItem tag="3" title="Item" image="arrow.up.square" catalog="system" id="42i-gV-sEr" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target">
                                         <connections>
                                             <segue destination="uHN-PG-h2f" kind="show" id="3G0-6b-Zcj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="baA-PJ-tWg"/>
-                                    <barButtonItem tag="4" title="Item" image="paintpalette" catalog="system" id="lPJ-mE-p89">
+                                    <barButtonItem tag="4" title="Item" image="paintpalette" catalog="system" id="lPJ-mE-p89" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target">
                                         <connections>
                                             <segue destination="8lP-9X-sJc" kind="show" id="rjv-mF-UJc"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Mxx-I2-T6G"/>
-                                    <barButtonItem tag="5" title="Item" image="arrowshape.turn.up.left" catalog="system" id="4Kn-A8-oA2"/>
+                                    <barButtonItem tag="5" title="Item" image="arrowshape.turn.up.left" catalog="system" id="4Kn-A8-oA2" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lSU-fI-oFr"/>
-                                    <barButtonItem tag="6" title="Item" image="arrowshape.turn.up.right" catalog="system" id="tEe-Iv-EIo"/>
+                                    <barButtonItem tag="6" title="Item" image="arrowshape.turn.up.right" catalog="system" id="tEe-Iv-EIo" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="caP-uu-nkb"/>
                                 </items>
                             </toolbar>
@@ -48,6 +52,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z8w-Y1-SEO"/>
+                    <connections>
+                        <outlet property="redoBarButton" destination="tEe-Iv-EIo" id="HWU-73-xqL"/>
+                        <outlet property="saveBarButton" destination="cqN-Lk-UQp" id="ITD-RI-YXo"/>
+                        <outlet property="trashBarButton" destination="9Rz-uT-Ca4" id="CET-EZ-rpA"/>
+                        <outlet property="undoBarButton" destination="4Kn-A8-oA2" id="gOf-gJ-CmK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGA-vs-3dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

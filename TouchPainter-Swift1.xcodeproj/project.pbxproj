@@ -35,6 +35,8 @@
 		E591A9E52662871C00A40027 /* MarkVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9E42662871C00A40027 /* MarkVisitor.swift */; };
 		E591A9F62662888500A40027 /* MarkRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9F52662888500A40027 /* MarkRenderer.swift */; };
 		E591A9FF2662895200A40027 /* CoordinatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9FE2662895200A40027 /* CoordinatingController.swift */; };
+		E5B668A82663D2D9000554D1 /* SaveScribbleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B668A72663D2D9000554D1 /* SaveScribbleCommand.swift */; };
+		E5B668AD2663D3B8000554D1 /* DeleteScribbleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B668AC2663D3B8000554D1 /* DeleteScribbleCommand.swift */; };
 		E5DB2DD826637E4700574A4E /* ScribbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DB2DD726637E4700574A4E /* ScribbleManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		E591A9E42662871C00A40027 /* MarkVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVisitor.swift; sourceTree = "<group>"; };
 		E591A9F52662888500A40027 /* MarkRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkRenderer.swift; sourceTree = "<group>"; };
 		E591A9FE2662895200A40027 /* CoordinatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatingController.swift; sourceTree = "<group>"; };
+		E5B668A72663D2D9000554D1 /* SaveScribbleCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveScribbleCommand.swift; sourceTree = "<group>"; };
+		E5B668AC2663D3B8000554D1 /* DeleteScribbleCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteScribbleCommand.swift; sourceTree = "<group>"; };
 		E5DB2DD726637E4700574A4E /* ScribbleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				E591A9AF26627EEB00A40027 /* Command.swift */,
+				E5B668A72663D2D9000554D1 /* SaveScribbleCommand.swift */,
+				E5B668AC2663D3B8000554D1 /* DeleteScribbleCommand.swift */,
 				E591A9C126627F8600A40027 /* SetStroleSizeCommand.swift */,
 				E591A9C62662803000A40027 /* SetStrokeColorCommand.swift */,
 			);
@@ -417,6 +423,7 @@
 				E57E3C612663241500377BF7 /* CanvasViewGenerator.swift in Sources */,
 				E591A99B26627D0000A40027 /* ScribbleThumbnailCell.swift in Sources */,
 				E591A98D266278D200A40027 /* ThumbnailViewController.swift in Sources */,
+				E5B668AD2663D3B8000554D1 /* DeleteScribbleCommand.swift in Sources */,
 				E591A992266278DE00A40027 /* PaletteViewController.swift in Sources */,
 				E591A9DF266286A000A40027 /* Dot.swift in Sources */,
 				E591A9C226627F8600A40027 /* SetStroleSizeCommand.swift in Sources */,
@@ -424,6 +431,7 @@
 				E591A9D0266283E600A40027 /* Mark.swift in Sources */,
 				E57E3C76266326B300377BF7 /* Scribble.swift in Sources */,
 				E591A9E52662871C00A40027 /* MarkVisitor.swift in Sources */,
+				E5B668A82663D2D9000554D1 /* SaveScribbleCommand.swift in Sources */,
 				E591A9B026627EEB00A40027 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
