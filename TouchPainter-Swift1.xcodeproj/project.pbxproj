@@ -35,6 +35,7 @@
 		E591A9E52662871C00A40027 /* MarkVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9E42662871C00A40027 /* MarkVisitor.swift */; };
 		E591A9F62662888500A40027 /* MarkRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9F52662888500A40027 /* MarkRenderer.swift */; };
 		E591A9FF2662895200A40027 /* CoordinatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9FE2662895200A40027 /* CoordinatingController.swift */; };
+		E5DB2DD826637E4700574A4E /* ScribbleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DB2DD726637E4700574A4E /* ScribbleManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		E591A9E42662871C00A40027 /* MarkVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVisitor.swift; sourceTree = "<group>"; };
 		E591A9F52662888500A40027 /* MarkRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkRenderer.swift; sourceTree = "<group>"; };
 		E591A9FE2662895200A40027 /* CoordinatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatingController.swift; sourceTree = "<group>"; };
+		E5DB2DD726637E4700574A4E /* ScribbleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E57E3C75266326B300377BF7 /* Scribble.swift */,
+				E5DB2DD726637E4700574A4E /* ScribbleManager.swift */,
 				E57E3C7D266327AD00377BF7 /* ScribbleMemento.swift */,
 			);
 			path = "Memento Observer";
@@ -407,6 +410,7 @@
 				E591A9A726627E5C00A40027 /* ViewUtil.swift in Sources */,
 				E591A9D52662847900A40027 /* Vertex.swift in Sources */,
 				E591A94E266277A300A40027 /* AppDelegate.swift in Sources */,
+				E5DB2DD826637E4700574A4E /* ScribbleManager.swift in Sources */,
 				E57E3C6A2663242600377BF7 /* CanvasView.swift in Sources */,
 				E591A9F62662888500A40027 /* MarkRenderer.swift in Sources */,
 				E591A9DA2662855900A40027 /* Stroke.swift in Sources */,

@@ -16,6 +16,21 @@ class ScribbleMemento {
     
     func data() -> Data? {
         guard let m = mark else { return nil }
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: m, requiringSecureCoding: false)
+            return data
+        } catch {
+            return nil
+        }
+    }
+    
+    func memento(with data: Data) -> ScribbleMemento? {
+        do {
+            let retoredMark = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
+            return ScribbleMemento(with: retoredMark as? Mark)
+        } catch {
+            return nil
+        }
     }
     
     
