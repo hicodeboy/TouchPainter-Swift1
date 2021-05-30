@@ -12,16 +12,20 @@ class ThumbnailViewController: UIViewController,
                                UICollectionViewDataSource {
     
     var collectionView: UICollectionView!
+    var scribbleManager: ScribbleManager = ScribbleManager()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         /// TODO 缩略图个数
-        return 10
+        return self.scribbleManager.numberOfScribbles()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ScribbleThumbnailCell
             = collectionView.dequeueReusableCell(withReuseIdentifier: "ScribbleThumbnailCell", for: indexPath) as! ScribbleThumbnailCell
         cell.backgroundColor = .red
+        let scribbleThumbnail = scribbleManager.scribbleThumbnailView(atIndex: indexPath.row)
+        cell.add(thumbnailView: scribbleThumbnail!)
+        
         
         return cell
     }

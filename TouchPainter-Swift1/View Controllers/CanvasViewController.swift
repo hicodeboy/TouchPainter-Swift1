@@ -25,6 +25,7 @@ class CanvasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         trashBarButton.command = DeleteScribbleCommand()
+        saveBarButton.command = SaveScribbleCommand()
         
         // 设置中介者画板对象
         CoordinatingController.instance.canvasViewController = self

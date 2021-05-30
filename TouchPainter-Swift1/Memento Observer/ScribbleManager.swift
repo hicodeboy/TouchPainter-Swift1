@@ -39,6 +39,28 @@ class ScribbleManager {
         }
     }
     
+    func scribbleThumbnailView(atIndex index: Int) -> UIView? {
+        var loadedScribbleThumbnail: ScribbleThumbnailViewImageProxy? = nil
+        guard let scribbleThumbnailPathsArray = self.scribbleThumbnailPaths() else {
+            return nil
+        }
+        
+        guard let scribblePathsArray = self.scribbleDataPaths() else {
+            return nil
+        }
+        // 使用指定的索引取出以前保存备忘录的路径，
+        let scribbleThumbnailPath = scribbleThumbnailPathsArray[index]
+        
+        let scribblePath = scribblePathsArray[index]
+        
+        loadedScribbleThumbnail = ScribbleThumbnailViewImageProxy()
+        loadedScribbleThumbnail?.imagePath = kScribbleThumbnailPath.appending("/\(scribbleThumbnailPath)")
+        loadedScribbleThumbnail?.scribblePath = kScribbleDataPath.appending("/\(scribblePath)")
+        let touchCommand = OpenScribbleCommand(scribbleSource: loadedScribbleThumbnail!)
+        loadedScribbleThumbnail?.touchCommand = touchCommand
+        return loadedScribbleThumbnail
+    }
+    
     // 涂鸦的数量总和
     func numberOfScribbles() -> Int {
         return self.scribbleDataPaths()?.count ?? 0

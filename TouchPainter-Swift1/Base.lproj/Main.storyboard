@@ -27,7 +27,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wxD-iv-4gn"/>
-                                    <barButtonItem tag="2" title="Item" image="arrow.down.app" catalog="system" id="cqN-Lk-UQp" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target"/>
+                                    <barButtonItem tag="2" title="Item" image="arrow.down.app" catalog="system" id="cqN-Lk-UQp" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target">
+                                        <connections>
+                                            <action selector="toolBarAction:" destination="5qe-Pt-vlS" id="WVR-eB-wBe"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="A6Z-ul-sZz"/>
                                     <barButtonItem tag="3" title="Item" image="arrow.up.square" catalog="system" id="42i-gV-sEr" customClass="CommandBarButton" customModule="TouchPainter_Swift1" customModuleProvider="target">
                                         <connections>

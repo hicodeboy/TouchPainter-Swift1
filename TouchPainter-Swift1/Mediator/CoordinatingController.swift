@@ -26,6 +26,8 @@ class CoordinatingController {
             default:
                 print(".....")
             }
+        } else {
+            canvasViewController.navigationController?.popViewController(animated: true)
         }
         
     }

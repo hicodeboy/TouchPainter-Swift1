@@ -32,6 +32,11 @@ class ScribbleThumbnailViewImageProxy: ScribbleThumbnailView {
         return scribble
     }
     
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        image.draw(in: rect)
+    }
+    
     override var image: UIImage! {
         set {}
         get {
