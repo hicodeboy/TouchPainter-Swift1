@@ -23,7 +23,23 @@ class CanvasViewController: UIViewController {
         let defaultGenerator = CanvasViewGenerator()
         
         loadCanvasView(with: defaultGenerator)
+        let scribble = Scribble()
+        self.setScribble(scribble)
         loadSizeAndColor()
+    }
+    
+    func setScribble(_ scribble: Scribble) {
+        if (self.scribble != scribble) {
+            self.scribble = scribble
+            self.scribble?.addObserver(self, forKeyPath: "mark", options: [.new], context: nil)
+        }
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        guard let change = change else { return }
+        let mark = change[.newKey]
+        self.canvasView.mark = mark as? Mark
+        self.canvasView.setNeedsDisplay()
     }
     
     
@@ -34,17 +50,18 @@ class CanvasViewController: UIViewController {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        if let lastPoint = touches.first?.preciseLocation(in: canvasView) {
+        if let lastPoint = touches.first?.previousLocation(in: canvasView) {
             if lastPoint.equalTo(startPoint) {
                 let newStroke = Stroke()
                 newStroke.color = strokeColor
                 newStroke.size = strokeSize
                 scribble?.add(mark: newStroke, shouldAddToPreviousMark: false)
             }
+            guard let thisPoint = touches.first?.location(in: canvasView) else { return }
+            let vectex = Vertex(with: thisPoint)
+            scribble?.add(mark: vectex, shouldAddToPreviousMark: true)
         }
-        guard let thisPoint = touches.first?.location(in: canvasView) else { return }
-        let vectex = Vertex(with: thisPoint)
-        scribble?.add(mark: vectex, shouldAddToPreviousMark: true)
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
