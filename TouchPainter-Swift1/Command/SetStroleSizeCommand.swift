@@ -18,5 +18,9 @@ class SetStrokeSizeCommand: Command {
         guard let delegate = delegate else { return }
         var strokeSize: Float = 1.0
         delegate.command(self, size: &strokeSize)
+        
+        let coordinator = CoordinatingController.instance
+        let controler = coordinator.canvasViewController
+        controler?.strokeSize = CGFloat(strokeSize)
     }
 }

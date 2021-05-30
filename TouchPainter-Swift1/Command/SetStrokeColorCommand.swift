@@ -37,5 +37,8 @@ class SetStrokeColorCommand: Command {
         delegate?.command(command: self, color: color)
         
         // TODO 给canvasVC传值
+        let coordinator = CoordinatingController.instance
+        let controller = coordinator.canvasViewController
+        controller?.strokeColor = color
     }
 }
