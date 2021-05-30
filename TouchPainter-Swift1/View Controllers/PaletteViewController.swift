@@ -53,16 +53,32 @@ class PaletteViewController: UIViewController, SetStrokeColorCommandDelegate, Se
         self.paletteView.backgroundColor = color
     }
     
+    @IBAction func onCommandSliderValueChanged(_ sender: CommandSlider) {
+        sender.command?.execute()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let userDefaults = UserDefaults.init()
+        userDefaults.setValue(self.redSlider.value, forKey: "red")
+        userDefaults.setValue(self.greenSlider.value, forKey: "green")
+        userDefaults.setValue(self.blueSlider.value, forKey: "blue")
+        userDefaults.setValue(self.sizeSlider.value, forKey: "size")
+        userDefaults.synchronize()
+    }
+    
     
     func command(_ command: SetStrokeSizeCommand, size: inout Float) {
-        
+        size = self.sizeSlider.value
     }
     
     func command(command: SetStrokeColorCommand, red: inout Float, green: inout Float, blue: inout Float) {
-        
+        red = self.redSlider.value
+        green = self.greenSlider.value
+        blue = self.blueSlider.value
     }
     
     func command(command: SetStrokeColorCommand, color: UIColor) {
-        
+        self.paletteView.backgroundColor = color
     }
 }

@@ -87,6 +87,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yba-jq-FjC" customClass="CommandSlider" customModule="TouchPainter_Swift1" customModuleProvider="target">
                                 <rect key="frame" x="162" y="186" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onCommandSliderValueChanged:" destination="8lP-9X-sJc" eventType="valueChanged" id="lIa-MM-vI3"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIF-VP-elc">
                                 <rect key="frame" x="53" y="250" width="13" height="21"/>
@@ -98,6 +101,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ev9-0a-Bfk" customClass="CommandSlider" customModule="TouchPainter_Swift1" customModuleProvider="target">
                                 <rect key="frame" x="162" y="246" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onCommandSliderValueChanged:" destination="8lP-9X-sJc" eventType="valueChanged" id="Jnt-RG-47c"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-s9-fUo">
                                 <rect key="frame" x="53" y="316" width="11" height="21"/>
@@ -109,6 +115,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-LS-bxj" customClass="CommandSlider" customModule="TouchPainter_Swift1" customModuleProvider="target">
                                 <rect key="frame" x="162" y="311" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onCommandSliderValueChanged:" destination="8lP-9X-sJc" eventType="valueChanged" id="cPl-lB-i5c"/>
+                                </connections>
                             </slider>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FuP-ZX-YG1">
                                 <rect key="frame" x="48" y="377" width="22" height="36"/>
@@ -123,9 +132,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="t1f-uZ-DKJ" customClass="CommandSlider" customModule="TouchPainter_Swift1" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="t1f-uZ-DKJ" customClass="CommandSlider" customModule="TouchPainter_Swift1" customModuleProvider="target">
                                 <rect key="frame" x="162" y="381" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onCommandSliderValueChanged:" destination="8lP-9X-sJc" eventType="valueChanged" id="Cf8-K3-K12"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h7p-PV-3BO"/>
