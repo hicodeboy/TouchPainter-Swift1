@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E57E3C612663241500377BF7 /* CanvasViewGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E3C602663241500377BF7 /* CanvasViewGenerator.swift */; };
+		E57E3C6A2663242600377BF7 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E3C692663242600377BF7 /* CanvasView.swift */; };
 		E591A94E266277A300A40027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A94D266277A300A40027 /* AppDelegate.swift */; };
 		E591A950266277A300A40027 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A94F266277A300A40027 /* SceneDelegate.swift */; };
 		E591A955266277A300A40027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591A953266277A300A40027 /* Main.storyboard */; };
@@ -28,7 +30,9 @@
 		E591A9D52662847900A40027 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9D42662847900A40027 /* Vertex.swift */; };
 		E591A9DA2662855900A40027 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9D92662855900A40027 /* Stroke.swift */; };
 		E591A9DF266286A000A40027 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9DE266286A000A40027 /* Dot.swift */; };
-		E591A9E52662871C00A40027 /* MarkVistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9E42662871C00A40027 /* MarkVistor.swift */; };
+		E591A9E52662871C00A40027 /* MarkVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9E42662871C00A40027 /* MarkVisitor.swift */; };
+		E591A9F62662888500A40027 /* MarkRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9F52662888500A40027 /* MarkRenderer.swift */; };
+		E591A9FF2662895200A40027 /* CoordinatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591A9FE2662895200A40027 /* CoordinatingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E57E3C602663241500377BF7 /* CanvasViewGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewGenerator.swift; sourceTree = "<group>"; };
+		E57E3C692663242600377BF7 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		E591A94A266277A300A40027 /* TouchPainter-Swift1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TouchPainter-Swift1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591A94D266277A300A40027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E591A94F266277A300A40027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +82,9 @@
 		E591A9D42662847900A40027 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		E591A9D92662855900A40027 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 		E591A9DE266286A000A40027 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
-		E591A9E42662871C00A40027 /* MarkVistor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVistor.swift; sourceTree = "<group>"; };
+		E591A9E42662871C00A40027 /* MarkVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVisitor.swift; sourceTree = "<group>"; };
+		E591A9F52662888500A40027 /* MarkRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkRenderer.swift; sourceTree = "<group>"; };
+		E591A9FE2662895200A40027 /* CoordinatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E57E3C5F2663240000377BF7 /* Factory Method */ = {
+			isa = PBXGroup;
+			children = (
+				E57E3C602663241500377BF7 /* CanvasViewGenerator.swift */,
+			);
+			path = "Factory Method";
+			sourceTree = "<group>";
+		};
+		E57E3C682663241A00377BF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E57E3C692663242600377BF7 /* CanvasView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E591A941266277A300A40027 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +151,9 @@
 		E591A94C266277A300A40027 /* TouchPainter-Swift1 */ = {
 			isa = PBXGroup;
 			children = (
+				E57E3C682663241A00377BF7 /* Views */,
+				E57E3C5F2663240000377BF7 /* Factory Method */,
+				E591A9FA2662891700A40027 /* Mediator */,
 				E591A9E32662871100A40027 /* Vistor */,
 				E591A9CE266283D400A40027 /* Prototype */,
 				E591A9AE26627EE100A40027 /* Command */,
@@ -213,9 +240,18 @@
 		E591A9E32662871100A40027 /* Vistor */ = {
 			isa = PBXGroup;
 			children = (
-				E591A9E42662871C00A40027 /* MarkVistor.swift */,
+				E591A9E42662871C00A40027 /* MarkVisitor.swift */,
+				E591A9F52662888500A40027 /* MarkRenderer.swift */,
 			);
 			path = Vistor;
+			sourceTree = "<group>";
+		};
+		E591A9FA2662891700A40027 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				E591A9FE2662895200A40027 /* CoordinatingController.swift */,
+			);
+			path = Mediator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,13 +385,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E591A9C72662803000A40027 /* SetStrokeColorCommand.swift in Sources */,
+				E591A9FF2662895200A40027 /* CoordinatingController.swift in Sources */,
 				E591A9BD26627F5400A40027 /* CommandSlider.swift in Sources */,
 				E591A985266278BE00A40027 /* CanvasViewController.swift in Sources */,
 				E591A9B826627F2400A40027 /* CommandBarButton.swift in Sources */,
 				E591A9A726627E5C00A40027 /* ViewUtil.swift in Sources */,
 				E591A9D52662847900A40027 /* Vertex.swift in Sources */,
 				E591A94E266277A300A40027 /* AppDelegate.swift in Sources */,
+				E57E3C6A2663242600377BF7 /* CanvasView.swift in Sources */,
+				E591A9F62662888500A40027 /* MarkRenderer.swift in Sources */,
 				E591A9DA2662855900A40027 /* Stroke.swift in Sources */,
+				E57E3C612663241500377BF7 /* CanvasViewGenerator.swift in Sources */,
 				E591A99B26627D0000A40027 /* ScribbleThumbnailCell.swift in Sources */,
 				E591A98D266278D200A40027 /* ThumbnailViewController.swift in Sources */,
 				E591A992266278DE00A40027 /* PaletteViewController.swift in Sources */,
@@ -363,7 +403,7 @@
 				E591A9C226627F8600A40027 /* SetStroleSizeCommand.swift in Sources */,
 				E591A950266277A300A40027 /* SceneDelegate.swift in Sources */,
 				E591A9D0266283E600A40027 /* Mark.swift in Sources */,
-				E591A9E52662871C00A40027 /* MarkVistor.swift in Sources */,
+				E591A9E52662871C00A40027 /* MarkVisitor.swift in Sources */,
 				E591A9B026627EEB00A40027 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

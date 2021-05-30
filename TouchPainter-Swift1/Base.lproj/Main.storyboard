@@ -21,25 +21,25 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Dko-1E-VZv"/>
-                                    <barButtonItem title="Item" image="trash" catalog="system" id="9Rz-uT-Ca4"/>
+                                    <barButtonItem tag="1" title="Item" image="trash" catalog="system" id="9Rz-uT-Ca4"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wxD-iv-4gn"/>
-                                    <barButtonItem title="Item" image="arrow.down.app" catalog="system" id="cqN-Lk-UQp"/>
+                                    <barButtonItem tag="2" title="Item" image="arrow.down.app" catalog="system" id="cqN-Lk-UQp"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="A6Z-ul-sZz"/>
-                                    <barButtonItem title="Item" image="arrow.up.square" catalog="system" id="42i-gV-sEr">
+                                    <barButtonItem tag="3" title="Item" image="arrow.up.square" catalog="system" id="42i-gV-sEr">
                                         <connections>
                                             <segue destination="uHN-PG-h2f" kind="show" id="3G0-6b-Zcj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="baA-PJ-tWg"/>
-                                    <barButtonItem title="Item" image="paintpalette" catalog="system" id="lPJ-mE-p89">
+                                    <barButtonItem tag="4" title="Item" image="paintpalette" catalog="system" id="lPJ-mE-p89">
                                         <connections>
                                             <segue destination="8lP-9X-sJc" kind="show" id="rjv-mF-UJc"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Mxx-I2-T6G"/>
-                                    <barButtonItem title="Item" image="arrowshape.turn.up.left" catalog="system" id="4Kn-A8-oA2"/>
+                                    <barButtonItem tag="5" title="Item" image="arrowshape.turn.up.left" catalog="system" id="4Kn-A8-oA2"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lSU-fI-oFr"/>
-                                    <barButtonItem title="Item" image="arrowshape.turn.up.right" catalog="system" id="tEe-Iv-EIo"/>
+                                    <barButtonItem tag="6" title="Item" image="arrowshape.turn.up.right" catalog="system" id="tEe-Iv-EIo"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="caP-uu-nkb"/>
                                 </items>
                             </toolbar>
@@ -56,7 +56,7 @@
         <!--Thumbnail View Controller-->
         <scene sceneID="oD5-DV-H9R">
             <objects>
-                <viewController id="uHN-PG-h2f" customClass="ThumbnailViewController" customModule="TouchPainter_Swift1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThumbnailViewController" id="uHN-PG-h2f" customClass="ThumbnailViewController" customModule="TouchPainter_Swift1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19I-9T-2xh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
         <!--Palette View Controller-->
         <scene sceneID="TiF-e5-YWP">
             <objects>
-                <viewController id="8lP-9X-sJc" customClass="PaletteViewController" customModule="TouchPainter_Swift1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaletteViewController" id="8lP-9X-sJc" customClass="PaletteViewController" customModule="TouchPainter_Swift1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szc-yK-BIc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
