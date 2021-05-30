@@ -24,7 +24,7 @@ class ScribbleMemento {
         }
     }
     
-    func memento(with data: Data) -> ScribbleMemento? {
+    class func memento(with data: Data) -> ScribbleMemento? {
         do {
             let retoredMark = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
             return ScribbleMemento(with: retoredMark as? Mark)

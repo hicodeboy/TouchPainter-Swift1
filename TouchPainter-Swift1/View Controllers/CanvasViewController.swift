@@ -39,7 +39,7 @@ class CanvasViewController: UIViewController {
     func setScribble(_ scribble: Scribble) {
         if (self.scribble != scribble) {
             self.scribble = scribble
-            self.scribble?.addObserver(self, forKeyPath: "mark", options: [.new], context: nil)
+            self.scribble?.addObserver(self, forKeyPath: "mark", options: [.initial,.new], context: nil)
         }
     }
     
