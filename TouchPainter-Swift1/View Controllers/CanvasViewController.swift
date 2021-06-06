@@ -22,6 +22,14 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var undoBarButton: CommandBarButton!
     
     @IBOutlet weak var redoBarButton: CommandBarButton!
+    
+    let _undoManager: UndoManager = UndoManager()
+    
+    var undoT: UndoType = .none
+    
+    
+    var scribleInvocation: ScribleInvocation = ScribleInvocation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         trashBarButton.command = DeleteScribbleCommand()
@@ -65,6 +73,9 @@ class CanvasViewController: UIViewController {
                 newStroke.color = strokeColor
                 newStroke.size = strokeSize
                 scribble?.add(mark: newStroke, shouldAddToPreviousMark: false)
+                drawScribleInvocation { (invocation) in
+                    invocation.mark = newStroke
+                }
             }
             guard let thisPoint = touches.first?.location(in: canvasView) else { return }
             let vectex = Vertex(with: thisPoint)
@@ -83,6 +94,9 @@ class CanvasViewController: UIViewController {
             singleDot.color = strokeColor
             singleDot.size = strokeSize
             scribble.add(mark: singleDot, shouldAddToPreviousMark: false)
+            drawScribleInvocation { (invocation) in
+                invocation.mark = singleDot
+            }
         }
         startPoint = .zero
     }
@@ -93,7 +107,21 @@ class CanvasViewController: UIViewController {
     }
     
     @IBAction func toolBarAction(_ sender: CommandBarButton) {
-        sender.command?.execute()
+        switch sender.tag {
+        case 1:
+            fallthrough
+        case 2:
+            sender.command?.execute()
+        case 5:
+            self.undoT = .undo
+            self.undoManager.undo()
+        case 6:
+            self.undoT = .redo
+            self.undoManager.redo()
+        default:
+            print("\(sender.tag)")
+        }
+        
     }
     func loadSizeAndColor() {
         let userDefaults = UserDefaults.init()
@@ -134,5 +162,44 @@ class CanvasViewController: UIViewController {
         super.viewWillDisappear(animated)
         /// 将要消失时将导航条显示
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+}
+
+extension CanvasViewController {
+    enum UndoType {
+        case none
+        case undo
+        case redo
+    }
+    
+    override var undoManager: UndoManager {
+        return _undoManager
+    }
+    
+    func drawScribleInvocation(_ mutations: (inout ScribleInvocation) -> Void) {
+        guard let scrible = scribble else { return }
+        let oldInvocation = scribleInvocation
+        mutations(&scribleInvocation)
+        let model = oldInvocation.action(undo: scribleInvocation)
+        scribleInvocation = model.undo
+        undoManager.registerUndo(withTarget: self) { (target) in
+            switch (self.undoT) {
+            case .none:
+                print("none")
+            case .undo:
+                model.undo.undo(with: scrible)
+            case .redo:
+                model.redo.redo(with: scrible)
+            }
+            target.drawScribleInvocation { (m) in
+                m = model.undo
+            }
+        }
+        DispatchQueue.main.async {
+            self.redoBarButton.isEnabled = self.undoManager.canRedo
+            self.undoBarButton.isEnabled = self.undoManager.canUndo
+        }
+        
+        
     }
 }

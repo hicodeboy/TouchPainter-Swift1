@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50EFE7C266C703C00872A6C /* ScribleInvovation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50EFE7B266C703C00872A6C /* ScribleInvovation.swift */; };
 		E57E3C612663241500377BF7 /* CanvasViewGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E3C602663241500377BF7 /* CanvasViewGenerator.swift */; };
 		E57E3C6A2663242600377BF7 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E3C692663242600377BF7 /* CanvasView.swift */; };
 		E57E3C76266326B300377BF7 /* Scribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E3C75266326B300377BF7 /* Scribble.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E50EFE7B266C703C00872A6C /* ScribleInvovation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribleInvovation.swift; sourceTree = "<group>"; };
 		E57E3C602663241500377BF7 /* CanvasViewGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewGenerator.swift; sourceTree = "<group>"; };
 		E57E3C692663242600377BF7 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		E57E3C75266326B300377BF7 /* Scribble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scribble.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E50EFE72266C6F9B00872A6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E50EFE7B266C703C00872A6C /* ScribleInvovation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E57E3C5F2663240000377BF7 /* Factory Method */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		E591A94C266277A300A40027 /* TouchPainter-Swift1 */ = {
 			isa = PBXGroup;
 			children = (
+				E50EFE72266C6F9B00872A6C /* Model */,
 				E5B668B62663D5F4000554D1 /* Proxy */,
 				E57E3C74266326A700377BF7 /* Memento Observer */,
 				E57E3C682663241A00377BF7 /* Views */,
@@ -457,6 +468,7 @@
 				E591A9E52662871C00A40027 /* MarkVisitor.swift in Sources */,
 				E5B668A82663D2D9000554D1 /* SaveScribbleCommand.swift in Sources */,
 				E591A9B026627EEB00A40027 /* Command.swift in Sources */,
+				E50EFE7C266C703C00872A6C /* ScribleInvovation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
