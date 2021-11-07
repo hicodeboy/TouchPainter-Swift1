@@ -49,6 +49,9 @@ class CanvasViewController: UIViewController {
         if (self.scribble != scribble) {
             self.scribble = scribble
             self.scribble?.addObserver(self, forKeyPath: "mark", options: [.initial,.new], context: nil)
+            self.undoManager.removeAllActions()
+            self.undoBarButton.isEnabled = self.undoManager.canUndo
+            self.redoBarButton.isEnabled = self.undoManager.canRedo
         }
     }
     
@@ -86,18 +89,18 @@ class CanvasViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        guard let lastPoint = touches.first?.preciseLocation(in: canvasView),
-              let thisPoint = touches.first?.location(in: canvasView),
-              let scribble = scribble else { return }
-        if lastPoint.equalTo(thisPoint) {
-            let singleDot = Dot(with: thisPoint)
-            singleDot.color = strokeColor
-            singleDot.size = strokeSize
-            scribble.add(mark: singleDot, shouldAddToPreviousMark: false)
-            drawScribleInvocation { (invocation) in
-                invocation.mark = singleDot
-            }
-        }
+//        guard let lastPoint = touches.first?.preciseLocation(in: canvasView),
+//              let thisPoint = touches.first?.location(in: canvasView),
+//              let scribble = scribble else { return }
+//        if lastPoint.equalTo(thisPoint) {
+//            let singleDot = Dot(with: thisPoint)
+//            singleDot.color = strokeColor
+//            singleDot.size = strokeSize
+//            scribble.add(mark: singleDot, shouldAddToPreviousMark: false)
+//            drawScribleInvocation { (invocation) in
+//                invocation.mark = singleDot
+//            }
+//        }
         startPoint = .zero
     }
     
